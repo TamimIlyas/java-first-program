@@ -10,12 +10,12 @@ public class SavingsCalculator {
     }
     private float sumOfCredits(){
         float sum = 0.0f;
-        return sum;
+        return  0.0f;
     }
     private float sumOfDebits(){
-        float sum = 0.0f;
-        return sum;
+        return 0.0f;
     }
+    float sum = 0.0f;
 
     public float getCredits() {
         return credits;
