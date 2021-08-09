@@ -27,8 +27,7 @@ public class BestLoanRates {
             System.out.println("Best Available Rate: " + loanTermInYears + "%");
             return bestRates.get(loanTermInYears);
 
-        }
-        else {
+        } else {
             return 0.0f;
         }
 
