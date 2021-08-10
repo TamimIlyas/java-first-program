@@ -1,4 +1,6 @@
 package com.h2;
+import java.lang.Object;
+import java.text.DecimalFormat;
 
 public class MortgageCalculator {
     private long loanAmount;
@@ -16,14 +18,22 @@ public class MortgageCalculator {
         return termInYears;
     }
     private float getMonthlyInterestRate(){
-        float interestRate = (annualRate / 100) + (termInYears / 12);  //7
+        float interestRate = (annualRate / 100);
+         interestRate= interestRate / 12;
         return  interestRate;
     }
     public void calculateMonthlyPayment(){
         long p = loanAmount;
         float r = getMonthlyInterestRate();
         int n = getNumberOfPayments();
-        p *(((r * Math.pow(1 + r, n ))) / ((Math.pow((1 + r), n) - 1));
-        double M = this.monthlyPayment;
+        double M = p *(((r * Math.pow(1 + r, n )))) / ((Math.pow((1 + r), n) - 1));
+        this.monthlyPayment = M;
+    }
+
+    public MortgageCalculator() {
+        super();
+    }
+    public String toString(){
+        return "Hallo";
     }
 }
