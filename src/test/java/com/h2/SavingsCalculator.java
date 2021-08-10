@@ -16,7 +16,7 @@ public class SavingsCalculator {
     }
 
     private float sumOfDebits() {               //7
-        //return sumOfCredits();                /78
+        //return sumOfCredits();                //8
         float sum = 0.0f;
         return 0.0f;
     }
