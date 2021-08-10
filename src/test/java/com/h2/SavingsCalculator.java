@@ -1,35 +1,29 @@
 package com.h2;
+import java.time.LocalDate;
 
 public class SavingsCalculator {
-    private float credits;
-    private float debits;
+    private float[] credits;
+    private float[] debits;
 
-    public SavingsCalculator(float credits, float debits) {
+    public SavingsCalculator(float[] credits, float[] debits) {
         this.credits = credits;
         this.debits = debits;
     }
-    private float sumOfCredits(){
+
+    private float sumOfCredits() {
         float sum = 0.0f;
-        return  0.0f;
+        return 0.0f;                            //6
     }
-    private float sumOfDebits(){
+
+    private float sumOfDebits() {               //7
+        //return sumOfCredits();                /78
+        float sum = 0.0f;
         return 0.0f;
     }
-    float sum = 0.0f;
-
-    public float getCredits() {
-        return credits;
-    }
-
-    public void setCredits(float credits) {
-        this.credits = credits;
-    }
-
-    public float getDebits() {
-        return debits;
-    }
-
-    public void setDebits(float debits) {
-        this.debits = debits;
+    private static  int  remainingDaysInMonth(int data, LocalDate date){            //9, 10
+        LocalDate yearMonth = LocalDate.of(1, 2, 2);
+        int totalDaysInMonth = yearMonth.lengthOfMonth();
+        int remainingDays = date.getDayOfMonth();
+        return 0;
     }
 }
