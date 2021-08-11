@@ -22,6 +22,6 @@ public class App
             sum = sum + numbers[i] ;
         }
             return sum;
-        //return sum;
+
     }
 }
