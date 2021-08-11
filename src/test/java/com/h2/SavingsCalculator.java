@@ -20,7 +20,7 @@ public class SavingsCalculator {
     private float sumOfDebits() {
         float sum = 0.0f;
         for (int i = 0; i <= debits.length; i++) {
-            sum = + debits[i];
+            sum = +debits[i];
         }
     }
     private static  int  remainingDaysInMonth(LocalDate date) {            //9, 10
