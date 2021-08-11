@@ -41,7 +41,7 @@ public class MortgageCalculator {
         int termInYears = Integer.parseInt(args[1]);
         float annualRate = Float.parseFloat(args[2]);
         MorgtgateCalculator calculator = new MortgageCalculator(loanAmount,termInYears,annualRate);
-        monthlyPayment = calculator.calculateMonthlyPayment();
+        calculator.calculateMonthlyPayment();
         System.out.println(rechner.toString());
 
 
