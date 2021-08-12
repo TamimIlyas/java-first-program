@@ -23,7 +23,7 @@ public class SavingsCalculator {
             sum = +debits[i];
         }
     }
-    private static  int  remainingDaysInMonth(LocalDate date) {            //9, 10
+    private static  int  remainingDaysInMonth(LocalDate date) {
         YearMonth yearMonth = YearMonth.of(date.getYear(), date.getMonth());
         int totalDaysInMonth = yearMonth.lengthOfMonth();
         int remainingDays = totalDaysInMonth - date.getDayOfMonth();
