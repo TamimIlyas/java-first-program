@@ -25,13 +25,11 @@ public class MortgageCalculator {
         long p = loanAmount;
         float r = getMonthlyInterestRate();
         int n = getNumberOfPayments();
-        double M = p *(((r * Math.pow(1 + r, n )))) / ((Math.pow((1 + r), n) - 1));
+        double M = p * (((r * Math.pow(1 + r, n )))) / ((Math.pow((1 + r), n) - 1));
+
         this.monthlyPayment = M;
     }
 
-    public MortgageCalculator() {
-        super();
-    }
     public String toString(){
         DecimalFormat df = new DecimalFormat("####0.00");
         return "monthlyPayment: " + df.format(monthlyPayment);

@@ -54,11 +54,11 @@ public class Finance {
             return;
         }
         boolean isValidCommand = validateCommandArguments(args);
-        if (!isValidCommand){
-            commandsToUsage.get(args[0]);
+        if (isValidCommand){
+            executeCommand(command, Arrays.copyOfRange(args, 1, args.length));
+        }else{
             return;
         }
-        executeCommand(command, Arrays.copyOfRange(args, 1, args.length));
     }
-
 }
+
