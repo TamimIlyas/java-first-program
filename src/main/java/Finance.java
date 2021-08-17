@@ -3,15 +3,18 @@ import java.util.Map;
 import com.h2.BestLoanRates;
 import com.h2.MortgageCalculator;
 import com.h2.SavingsCalculator;
+
 public class Finance {
 
-    public static final String
-            BEST_LOAN_RATES = "bestLoanRates",
-            SAVINGS_CALCULATOR = "savingsCalculator",
-            MORTGAGE_CALCULATOR = "mortgageCalculator";
-    public static final Map<String, String> commandsToUsage = Map.of(BEST_LOAN_RATES, "usage: bestLoanRates",
+    public static final String BEST_LOAN_RATES = "bestLoanRates";
+    public static final String SAVINGS_CALCULATOR = "savingsCalculator";
+    public static final String MORTGAGE_CALCULATOR = "mortgageCalculator";
+
+    public static final Map<String, String> commandsToUsage = Map.of(
+            BEST_LOAN_RATES, "usage: bestLoanRates",
             SAVINGS_CALCULATOR, "usage: savingsCalculator <credits separated by ','> <debits separated by ','>",
             MORTGAGE_CALCULATOR, "usage: mortgageCalculator <loanAmount> <termInYears> <annualRate>");
+
 
     private static boolean validateCommandArguments(String[] args) {
         switch (args[0]) {
@@ -23,6 +26,7 @@ public class Finance {
                 return args.length == 4;
         }
         return false;
+
     }
     private static void executeCommand(String command, String[] argumnets){
         switch (command) {
@@ -39,18 +43,18 @@ public class Finance {
             case MORTGAGE_CALCULATOR:
                 System.out.println("Finding your monthly payment ...");
                 MortgageCalculator.main(argumnets);
-                return;
 
         }
     }
+
     public static void main(String[] args){
         String command = args[0];
-        if (commandsToUsage.containsKey(command)){
+        if (!commandsToUsage.containsKey(command)){
             System.out.println(command + ": command not found");
             return;
         }
         boolean isValidCommand = validateCommandArguments(args);
-        if (isValidCommand != true){
+        if (!isValidCommand){
             commandsToUsage.get(args[0]);
             return;
         }

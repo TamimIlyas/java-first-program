@@ -34,6 +34,4 @@ public class Utilities {
         }
         return out;
     }
-
-
 }

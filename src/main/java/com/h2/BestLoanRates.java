@@ -1,4 +1,5 @@
 package com.h2;
+
 import java.util.Scanner;
 import java.util.Map;
 
@@ -24,6 +25,7 @@ public class BestLoanRates {
     public static float getRates(int loanTermInYears) {
         if (bestRates.containsKey(loanTermInYears)) {
             System.out.println("No available rates for term: " + loanTermInYears + "years");
+
             System.out.println("Best Available Rate: " + loanTermInYears + "%");
             return bestRates.get(loanTermInYears);
 
