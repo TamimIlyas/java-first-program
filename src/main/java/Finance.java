@@ -56,7 +56,9 @@ public class Finance {
         boolean isValidCommand = validateCommandArguments(args);
         if (isValidCommand){
             executeCommand(command, Arrays.copyOfRange(args, 1, args.length));
+
         }else{
+            System.out.println(command + ": command not valid");
             return;
         }
     }

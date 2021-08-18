@@ -13,15 +13,15 @@ public class SavingsCalculator {
 
     private float sumOfCredits() {
         float sum = 0.0f;
-        for (int i = 0; i <= credits.length; i++) {
+        for (int i = 0; i < credits.length; i++) {
             sum = + credits[i];
         }
         return sum;
     }
     private float sumOfDebits() {
         float sum = 0.0f;
-        for (int i = 0; i <= debits.length; i++) {
-            sum = +debits[i];
+        for (int i = 0; i < debits.length; i++) {
+            sum = + debits[i];
         }
         return sum;
     }
@@ -54,6 +54,5 @@ public class SavingsCalculator {
                 System.out.println("Net Savings = " + netSavings + ", remaining days in month = " + remainingDaysInMonth(LocalDate.now()));
             }
         }
-
     }
 }
